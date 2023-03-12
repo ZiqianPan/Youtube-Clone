@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import YouTube from "react-youtube";
 import Error from "./Error";
 import "./Video.css"
 
-export default function Video({ videos, setTheVideo, theVideo }) {
+export default function Video({ videos }) {
   const { id } = useParams();
   const video = videos.find((video) => video.id.videoId === id);
 
