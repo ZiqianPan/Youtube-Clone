@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
 import "./Navigation.css";
 import { useNavigate } from "react-router-dom";
 import logo from "./youtube.png";
 import upload from "./images/upload.png";
 import notification from "./images/notification.png";
-import menu from "./images/menu.png";
 import more from "./images/more.png";
 import jack from "./images/Jack.png";
-import microphone from "./images/voice-search.png";
-import Error from "./Error";
 
 function TopNav({
   search,
   setSearch,
-  videos,
   setVideos,
   submited,
   setSubmited,
@@ -23,7 +18,6 @@ function TopNav({
   randomVideos,
   setRandomVideos,
   setDisplaySearch,
-  displaySearch,
 }) {
   const apiKey = process.env.REACT_APP_API_KEY;
   const navigate = useNavigate();
